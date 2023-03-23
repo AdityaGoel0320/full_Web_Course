@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            border: 15px black;
+            background-color: black;
+            color: white;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            font-weight: bolder;
+            font-size: larger;
+            font-family: cursive;
+
+        }
+
+        li {
+
+            margin-left: 0.575rem;
+        }
+
+        .logo {
+            width: 117px;
+            height: 50px;
+        }
+
+        .Content {
+            margin-right: 55px;
+
+        }
+
+        .heading {
+            display: flex;
+            color: white;
+            font-weight: 900;
+            font-size: 75px;
+            justify-content: center;
+            height: 100vh;
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: center;
+        }
+
+        p {
+            margin: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-weight: 600;
+            font-size: xx-large;
+        }
+
+        .p {
+            margin: 80px;
+        }
+
+
+        .navbar.active {
+            background-color: black;
+        }
+
+        .navbar.active ul li a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar a">
+            <img class="logo" src="logo.jpg" alt="">
+
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li class="Content">Content</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="heading">Welcome to Our Website</div>
+
+
+    <div class="p ">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, totam unde! Aperiam sunt vel nulla, libero
+            temporibus dolorem tempore ex ab quas. Eos magni ex alias error. Minus sit dolorum dolores nihil magni
+            accusantium deleniti harum doloribus fugiat, cum eligendi est quae, velit eaque nobis. Totam, incidunt nisi
+            tenetur nobis impedit exercitationem sunt porro ullam quod, nesciunt doloribus nulla? Doloremque vel nisi
+            non praesentium? Labore maiores perspiciatis possimus praesentium aspernatur sunt illo et quos deserunt
+            sequi eos sit delectus, minus fugiat harum vero doloremque soluta hic explicabo officia nemo nam! Odio
+            explicabo dolore sint in, rem soluta consequatur fuga atque?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, totam unde! Aperiam sunt vel nulla, libero
+            temporibus dolorem tempore ex ab quas. Eos magni ex alias error. Minus sit dolorum dolores nihil magni
+            accusantium deleniti harum doloribus fugiat, cum eligendi est quae, velit eaque nobis. Totam, incidunt nisi
+            tenetur nobis impedit exercitationem sunt porro ullam quod, nesciunt doloribus nulla? Doloremque vel nisi
+            non praesentium? Labore maiores perspiciatis possimus praesentium aspernatur sunt illo et quos deserunt
+            sequi eos sit delectus, minus fugiat harum vero doloremque soluta hic explicabo officia nemo nam! Odio
+            explicabo dolore sint in, rem soluta consequatur fuga atque?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, totam unde! Aperiam sunt vel nulla, libero
+            temporibus dolorem tempore ex ab quas. Eos magni ex alias error. Minus sit dolorum dolores nihil magni
+            accusantium deleniti harum doloribus fugiat, cum eligendi est quae, velit eaque nobis. Totam, incidunt nisi
+            tenetur nobis impedit exercitationem sunt porro ullam quod, nesciunt doloribus nulla? Doloremque vel nisi
+            non praesentium? Labore maiores perspiciatis possimus praesentium aspernatur sunt illo et quos deserunt
+            sequi eos sit delectus, minus fugiat harum vero doloremque soluta hic explicabo officia nemo nam! Odio
+            explicabo dolore sint in, rem soluta consequatur fuga atque?</p>
+    </div>
+
+
+
+
+    <script>
+
+        console.log("welcome to sticky navbar")
+
+        const navbarel = document.getElementsByClassName("navbar");
+        const pel = document.getElementsByClassName("p");
+
+
+
+        console.log(navbarel.offsetHeight)
+        console.log(pel.offsetTop)
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > pel.offsetTop - navbarel.offsetHeight - 50) {
+                navbarel.classList.add("active");
+            } else {
+                navbarel.classList.remove("active");
+
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

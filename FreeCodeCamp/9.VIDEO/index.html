@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        video {
+
+            margin: 0;
+            padding: 0;
+
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* object-fit: cover; */
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+           
+
+
+        }
+        button{
+            padding: 3px;
+
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <video autoplay loop id="video">
+            <source src="trailer.mp4" type="video/mp4">
+        </video>
+
+        <h1>
+            this is a sample text
+        </h1>
+        
+    </header> -->
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vitae animi beatae placeat reprehenderit minus unde ullam, adipisci esse fuga assumenda alias tempora accusamus doloremque culpa vel! Facere, expedita atque.
+
+    <video id="video2" controls>
+        <source src="trailer.mp4" type="video/mp4">
+    </video>
+    <button class="play" id="play">
+        play
+    </button>
+    <button class="pause" id="pause">
+        pause
+    </button>
+
+
+
+    <script>
+        let play   = document.getElementById("play")
+        let  pause  = document.getElementById("pause")
+        let  video2  = document.getElementById("video2")
+        // let    = document.getElementById("")
+
+        // let    = document.getElementById("")
+        // let    = document.getElementById("")
+
+
+        play.addEventListener("click" , fnc1) ;
+
+        function  fnc1(){
+            console.log("hi welcome to play btn");
+            video2.play() ;
+        }
+
+
+
+        pause.addEventListener("click" , fnc2) ;
+
+        function  fnc2(){
+            console.log("hi welcome to pause btn");
+            video2.pause() ;
+        }
+    </script>
+</body>
+
+</html>

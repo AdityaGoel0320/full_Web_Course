@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .video{
+            z-index: -2;
+            height: 200px;
+            width: 200px;
+        }
+        h1{
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video controls auto muted autoplay loop class="video" id="video">
+            <source src="trailer.mp4" type="video/mp4" >
+        </video>
+        <h1>Video</h1>
+    </header>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+
+    <script>
+        let  play_el =  document.getElementById("play")
+        let pause_el  =  document.getElementById("pause")
+        let video_el  =  document.getElementById("video")
+
+
+        play_el.addEventListener("click" , fnc) ;
+
+
+        function fnc(){
+            video_el.play() ;
+        }
+
+
+        pause_el.addEventListener("click" , fnc2);
+
+        function fnc2(){
+            video_el.pause() ;
+        }
+    </script>
+</body>
+
+</html>

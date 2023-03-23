@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        background-image: url("image.png");
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        padding: 0px;
+    }
+</style>
+
+<body>
+    <div class="cont"></div>
+    <nav class="flex space-x-5 justify-between items-center">
+        <img src="logo.png" alt="">
+        <ul class="flex space-x-9 ">
+            <li class="m-3 font-bold text-xl cursor-pointer" id="li1">Home</li>
+            <li class="m-3 font-bold text-xl cursor-pointer" id="li2">About</li>
+            <li class="m-3 font-bold text-xl cursor-pointer" id="li3">hiii</li>
+        </ul>
+    </nav>
+
+    <div class="font-bold text-white text-[80px] flex ml-5 realtive items-center">
+        <h1>THE <br> REAL <br> SOUND</h1>
+    </div>
+
+
+    <div class="flex space-x-5 justify-center items-center absolute right-5 top-72">
+        <p id="p" class="font-bold text-xl">Click to Listen</p>
+        <img id="icon" src="play.png" alt="">
+    </div>
+
+
+    <audio id="song1">
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+    <audio id="song2">
+        <source src="2.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="song3">
+        <source src="3.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        console.log("hi");
+        let icon_el = document.getElementById("icon")
+        let p_el = document.getElementById("p");
+        let song1_el = document.getElementById("song1");
+        let li1_el = document.getElementById("li1");
+        let li2_el = document.getElementById("li2");
+        let li3_el = document.getElementById("li3");
+        let song2_el = document.getElementById("song2");
+        let song3_el = document.getElementById("song3");
+
+
+        li3_el.addEventListener("click", fnc);
+
+
+
+        function fnc() {
+            if (p_el.innerText === "song played") {
+                p_el.innerText = "Click to play song";
+                icon_el.src = "play.png";
+                song1_el.pause();
+            }
+            else {
+                p_el.innerText = "song played";
+                icon_el.src = "pause.png";
+                song1_el.play();
+            }
+
+        }
+
+        li1_el.addEventListener("click", fnc2);
+
+        function fnc2() {
+
+            if (p_el.innerText === "song played") {
+                p_el.innerText = "Click to play song";
+                icon_el.src = "play.png";
+                song2_el.pause();
+            }
+            else {
+                p_el.innerText = "song played";
+                icon_el.src = "pause.png";
+                song2_el.play();
+            }
+
+
+        };
+
+
+
+        li2_el.addEventListener("click", fnc3);
+
+        function fnc3() {
+
+            if (p_el.innerText === "song played") {
+                p_el.innerText = "Click to play song";
+                icon_el.src = "play.png";
+                song3_el.pause();
+            }
+            else {
+                p_el.innerText = "song played";
+                icon_el.src = "pause.png";
+                song3_el.play();
+            }
+
+
+        };
+
+
+    </script>
+
+
+
+</body>
+
+</html>

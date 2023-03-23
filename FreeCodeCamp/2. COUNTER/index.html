@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1><span id="value">0</span></h1>
+    <button id="dec">dec</button>
+    <button id="reset">
+        reset
+
+    </button>
+    <button id="inc">inc</button>
+
+
+
+
+    <script>
+        let reset_el = document.getElementById("reset")
+        let inc_el = document.getElementById("inc")
+        let dec_el = document.getElementById("dec")
+        let value_el = document.getElementById("value")
+
+
+        reset_el.addEventListener("click", fnc1);
+
+        function fnc1() {
+            value_el.innerText = '0';
+            value_el.style.color = "black"
+
+        }
+
+
+
+
+
+        inc_el.addEventListener("click", fnc2)
+
+        function fnc2() {
+            let x = value_el.innerText;
+            console.log(x);
+
+            value_el.innerText = ++x;
+            value_el.style.color = "lightgreen"
+
+
+
+        }
+
+
+
+        dec_el.addEventListener("click", fnc3)
+
+        function fnc3() {
+            let x = value_el.innerText;
+            console.log(x);
+
+            value_el.innerText = --x;
+            value_el.style.color = "red"
+
+
+        }
+
+    </script>
+</body>
+
+</html>

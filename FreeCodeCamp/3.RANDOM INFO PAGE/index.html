@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            display: flex;
+            height: 600px;
+            width: 600px;
+
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: lightpink;
+            font-weight: bold;
+            padding: 30px;
+
+
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+
+        .box2 {
+            display: flex;
+            height: 600px;
+            width: 600px;
+
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: lightpink;
+            font-weight: bold;
+            padding: 30px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" id="box1">
+        <img src="logo.png" alt="">
+        <p>Lorem, ipsum.</p>
+        <p>lorem</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque autem sint doloribus in sed soluta veritatis
+            sequi! Totam, voluptates mollitia!</p>
+    </div>
+
+    <div class="box2" id="box2">
+        <img src="m.jpg" alt="">
+        <p>Lorem, ipsum.</p>
+        <p>lorem</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque autem sint doloribus in sed soluta veritatis
+            sequi! Totam, voluptates mollitia!</p>
+    </div>
+
+
+    <div class="btns">
+        <button class="btn1" id="btn1">
+            < </button>
+                <button class="btn2" id="btn2">></button>
+
+                <button class="random" id="random">random</button>
+    </div>
+
+
+    <script>
+        let btn1_el = document.getElementById("btn1")
+        let btn2_el = document.getElementById("btn2")
+        let box1_el = document.getElementById("box1")
+        let box2_el = document.getElementById("box2")
+        let random_el = document.getElementById("random")
+
+        btn2_el.addEventListener("click", fnc)
+
+        function fnc() {
+            console.log("hi you have clicked");
+            box2_el.style.display = "inline-block";
+            box1_el.style.display = "none";
+
+        }
+
+
+
+        btn1_el.addEventListener("click", fnc1)
+
+        function fnc1() {
+            console.log("hi you have clicked on left btn");
+            box2_el.style.display = "none";
+            box1_el.style.display = "inline-block";
+
+        }
+
+
+        random_el.addEventListener("click", fnc3)
+
+        function fnc3() {
+            console.log("hi you have clicked on random btn");
+            
+
+            box2_el.style.display = "none";
+            box1_el.style.display = "none";
+
+
+
+            let x = Math.floor(Math.random()*2) ;
+            console.log(x);
+            let arr = [box1_el , box2_el] ;
+
+            arr[x].style.display = "inline-block";
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-size: 70px;
+        }
+
+
+        .div {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            border: 2px solid black;
+            padding: 30px;
+            width: 500px;
+
+        }
+
+        #icon {
+            font-size: 30px;
+            border: 2px solid black;
+        }
+
+
+        .z {
+            display: flex;
+            gap: 70px;
+        }
+
+
+        .text1 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>General Questions</h1>
+
+    <div class="div">
+
+        <div class="z">
+            <h3>hi your 1st question </h3>
+            <i id="icon" class="fa-solid fa-plus"></i>
+        </div>
+        <span class="text1" id="text1"> <hr> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, inventore.</span>
+
+    </div>
+
+
+
+    <script>
+        let text1_el = document.getElementById("text1")
+        let icon_el = document.getElementById("icon")
+        // let   =  document.getElementById("")
+        // let   =  document.getElementById("")
+        // let   =  document.getElementById("")
+
+        icon_el.addEventListener("click", fnc);
+
+
+        function fnc() {
+
+            if (text1_el.style.display == "none") {
+                text1_el.style.display = "block"
+            }
+            else {
+                text1_el.style.display = "none";
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

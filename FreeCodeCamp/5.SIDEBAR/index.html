@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        ul {
+            background-color: lightpink;
+            display: flex;
+            list-style-type: none;
+            padding: 10px;
+            gap: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            align-items: center;
+        }
+
+
+
+        @media (max-width : 700px) {
+
+            ul {
+                display: none;
+                display: flex;
+                flex-direction: column;
+
+                /* most imp for to move on left side */
+                transform: translateX(-100%);
+                transition: all 0.3s linear;
+
+            }
+
+            .menu {
+                display: inline-block;
+            }
+
+
+            /* a pseudo class which add on ul when click on hamburger icon */
+            .active {
+                transform: translateX(0);
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="menu" id="menu">
+            <i class="fa-solid fa-bars" id="line"></i>
+        </div>
+
+
+        <ul class="ul" id="ul">
+            <li>gedifgeg</li>
+            <li>iwfbhie</li>
+            <li>ifiebf</li>
+        </ul>
+
+
+    </nav>
+
+    <script>
+        let menu_el = document.getElementById("menu")
+        let ul_el = document.getElementById("ul")
+
+
+
+        menu_el.addEventListener("click", fnc)
+
+        function fnc() {
+            console.log("hi you clicked on menu");
+
+            // to make pseudo class toggle on ul tag
+            ul_el.classList.toggle("active")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cont {
+            width: 800px;
+            height: 400px;
+            background-color: black;
+            display: flex;
+            position: absolute;
+            top: 200px;
+            left: 400px;
+        }
+
+
+        #img2 {
+            display: none;
+        }
+
+        #img3 {
+            display: none;
+        }
+
+        #img4 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <img id="img1" src="logo.png" alt="">
+
+        <img id="img2" src="m.jpg" alt="">
+        <img id="img3" src="logo.png" alt="">
+        <img id="img4" src="m.jpg" alt="">
+
+
+
+    </div>
+    <button class="pre" id="pre">previois</button>
+    <button class="for" id="for">forrward</button>
+
+
+    <script>
+        let   pre_el     = document.getElementById("pre")
+        let    for_el    = document.getElementById("for")
+        let    img1_el    = document.getElementById("img1")
+        let    img2_el    = document.getElementById("img2")
+        let    img3_el    = document.getElementById("img3")
+
+        
+        
+        let    img4_el    = document.getElementById("img4")
+        
+        
+
+        for_el.addEventListener("click" , fnc) ;
+
+
+
+        function fnc(){
+            console.log("hi")
+            if(img2_el.style.display == "none"){
+                img2_el.style.display == "inline-block"
+                img1_el.style.display == "none"
+            }
+        }
+    </script>
+</body>
+
+</html>

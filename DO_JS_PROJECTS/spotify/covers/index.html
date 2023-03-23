@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>SPOTIFY CLONE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .gif {
+            position: absolute;
+            left: 10vh;
+
+            margin: 0 23px;
+            width: 8%;
+            height: 8%;
+        }
+        .gif img {
+            opacity: 0;
+            transition: opacity 0.1s ease-in;
+        }
+        .cont {
+            background-image: url(bg.jpg)
+        };
+    </style>
+</head>
+<body class="bg-pink-100">
+    <!-- navigation bar -->
+    <nav>
+        <ul class="flex bg-black text-white space-x-5 p-1 justify-start items-center">
+            <li class="brand w-11"><img src="logo.png" alt=""></li>
+            <li class="font-bold">SPOTIFY</li>
+            <div class="nav2 flex space-x-3">
+                <li class="hover:font-bold py-3 ">HOME</li>
+                <li class="hover:font-bold py-3 ">ABOUT</li>
+            </div>
+        </ul>
+    </nav>
+    <!-- navigation bar -->
+    <!-- content -->
+    <div class="cont bg-black text-white min-h-[55vh] m-24 rounded-xl ">
+        <div class="bg">
+            <h1 class="text-xl">BEST OF THE SONGS</h1>
+            <div>
+                <div
+                    class="songItem flex bg-white text-black h-[50px] w-[50%] justify-between  font-bold p-1 rounded-2xl pointer">
+                    <img class="m-1 rounded-full pointer" src="1.jpg" alt="1">
+                    <span class="pointer">Let me Love You</span>
+                    <span>05:34</span></span><i class="fas fa-2x fa-step-forward "></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="img"><img src="bg.jpg" alt=""></div> -->
+    </div>
+    <!-- content -->
+    <!-- player bar -->
+    <footer class=" bg-black sticky h-44 flex justify-center items-center flex-col p-1">
+        <div class="bottom ">
+            <input class="w-[100vh]   " type="range" name="range">
+        </div>
+        <div class="icons m-3 p-3 pointer invert  ">
+            <i class="fas fa-3x  fa-step-backward"></i>
+            <i class="fas fa-3x  fa-play-circle" id="masterplay"></i>
+            <i class="fas fa-3x  fa-step-forward"></i>
+        </div>
+        <div class="gif text-white flex m-42 "><img src="playing.gif" alt="">Let me Love You</div>
+    </footer>
+    <!-- player bar -->
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/5b2dcec531.js" crossorigin="anonymous"></script>
+    <!-- fontawesome link -->
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        nav {
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            height: 5rem;
+        }
+
+        .ham {
+            color: wheat;
+            border: 2px solid white;
+            font-size: 2rem;
+            display: inline-block;
+            border-radius: 5px;
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            color: white;
+            align-items: center;
+            gap: 3rem;
+            font-size: 2rem;
+        }
+
+
+        .con {
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5rem;
+            padding: 22rem;
+        }
+
+
+        .z {
+            background: rgba(0, 0, 0, 0.4) url(nature.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .about {
+            height: 50vh;
+            width: 100%;
+            background-color: wheat;
+            border-bottom: 2px solid black;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .services {
+            height: 50vh;
+            border-bottom: 2px solid black;
+            width: 100%;
+            background-color: wheat;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .tours {
+            border-bottom: 2px solid black;
+            background-color: wheat;
+            height: 50vh;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .footer {
+            color: white;
+            background-color: #252525;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem;
+            flex-wrap: wrap-reverse;
+        }
+
+        .btngrp {
+            display: flex;
+            gap: 4rem;
+            font-size: 3rem;
+        }
+
+
+        a {
+            border: 2px solid white;
+            border-radius: 100%;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        a:hover {
+            color: lightblue;
+        }
+
+        .footer_content {
+            margin: 1.5rem;
+        }
+
+        .eul {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background: rgba(0, 0, 0, 0.4) url(nature.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+
+
+        @media (max-width : 740px) {
+            ul {
+                display: none;
+            }
+
+            .ham {
+                display: inline-block;
+                margin: 1rem;
+            }
+
+            .ex {
+                display: inline-block;
+                text-align: center;
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="z">
+        <nav>
+            <img src="logo.png" alt="" class="logo">
+
+            <ul>
+                <li class="li">HOME</li>
+                <li class="li">ABOUT</li>
+                <li class="li">SERVICES</li>
+                <li class="li">TOURS</li>
+
+
+            </ul>
+
+            <i class="fa-solid fa-3x fa-bars ham" id="ham"></i>
+
+
+        </nav>
+
+
+        <!-- <div class="e" id="e"> -->
+        <ul class="eul" id="eul">
+            <li class="li">HOME</li>
+            <li class="li">ABOUT</li>
+            <li class="li">SERVICES</li>
+            <li class="li">TOURS</li>
+        </ul>
+        <!-- </div> -->
+
+
+        <div class="con">
+            <h2>This is a sample Text</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laudantium?</span>
+            <buttton class="btn" id="btn">Explore Tours</buttton>
+        </div>
+    </div>
+
+
+
+    <div class="about">
+        ABOUT
+
+    </div>
+
+
+    <div class="services">
+        SEVICES
+
+    </div>
+
+
+
+    <div class="tours">
+        TOURS
+
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="footer_content">
+            <h1>
+                Hi , You can Contact me on my handles
+
+            </h1>
+            <div class="btngrp">
+                <a href="https://www.linkedin.com/in/aditya-goel-286245239" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a> <a href="" target="_blank"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="" alt="you profile pic">
+        </div>
+    </footer>
+
+
+    <script>
+
+        let eul = document.getElementById("eul")
+        let ham = document.getElementById("ham")
+        // let     =  document.getElementById("")
+        // let     =  document.getElementById("")
+        // let     =  document.getElementById("")
+
+
+        ham.addEventListener("click", fnc);
+
+        function fnc() {
+            console.log("welcome to console");
+            eul.classList.toggle("ex")
+            // if(eul.style.display === "none"){
+            //     eul.style.display = "block"
+            // }
+            // else{
+            //     eul.style.display = "none"
+
+            // }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+
+            /* height: 100vh; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: column;
+            background-color: chartreuse;
+            width: 500px;
+
+
+        }
+
+        button {
+            width: 100px;
+        }
+
+        .x {
+            height: 100vh;
+            display: none;
+        }
+
+
+
+        .h {
+            display: flex;
+            border: 2px solid red;
+            justify-content: center;
+            align-items: top;
+            width: 500px;
+
+
+        }
+
+
+        .img {
+            height: 10px;
+            width: 10px;
+        }
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua ;
+            display: flex;
+            justify-content: space-evenly;
+            display: none;
+        }
+        img{
+            height: 30px;
+            width: 30px;
+        }
+
+
+        .active{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div id="main">
+            <h1>Modal text</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, nostrum.</p>
+            <button id="btn">Open modal text</button>
+        </div>
+    </div>
+
+
+
+    <div id="box" class="box">
+        <h1>HI</h1>
+        <img  class="cross" id="cross" src="m.jpg" alt="">
+        
+    </div>
+
+
+    <script>
+        let btn_el = document.getElementById("btn")
+        let x_el = document.getElementById("x")
+        let cross_el = document.getElementById("cross")
+        let box_el  = document.getElementById("box")
+
+        btn_el.addEventListener("click", fnc);
+
+
+        function fnc(){
+            box_el.classList.toggle("active") ;
+        }
+
+
+
+
+        cross_el.addEventListener("click" , fnc2);
+
+
+        function  fnc2(){
+            box_el.style.display = "none"
+
+        }
+
+
+            
+
+        
+    </script> 
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box1 {
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+
+        }
+
+        .box2 {
+            background-color: lightpink;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="btns">
+        <button id="btn1">box1</button>
+        <button id="btn2">box2</button>
+    </div>
+    <div class="box1" id="box1">
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+        <div>
+            <h1>box1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet.</p>
+        </div>
+    </div>
+
+    <div class="box2" id="box2">
+        <h1>box 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, enim!</p>
+    </div>
+
+
+    <script>
+        let box1_el = document.getElementById("box1")
+        let box2_el = document.getElementById("box2")
+        let btn1_el = document.getElementById("btn1")
+
+        let btn2_el = document.getElementById("btn2")
+        btn1_el.addEventListener("click", fnc1)
+        function fnc1() {
+
+            box2_el.style.display = "none";
+            box1_el.style.display = "inline-block"
+
+        }
+
+
+        btn2_el.addEventListener("click", fnc2)
+        function fnc2() {
+            box1_el.style.display = "none";
+            box2_el.style.display = "inline-block"
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .h {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        ;
+        border: 2px solid black;
+
+    }
+
+    img {
+        border: 2px solid black;
+
+    }
+
+    button {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 30px;
+
+    }
+
+
+    .text_box {
+        background-color: lavender;
+        width: 500px;
+    }
+
+    .his {
+        /* display: none; */
+    }
+
+    .vis {
+        display: none;
+
+    }
+
+    .z {
+        display: none;
+
+    }
+</style>
+
+<body>
+    <div class="h">
+        <h1>hi welcome to my new project</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, magnam.</p>
+    </div>
+
+
+    <div class="box">
+        <img src="logo.png" alt="">
+        <div class="text_box">
+            <button id="btn1">history</button>
+            <button id="btn2">visible</button>
+            <button id="btn3">z</button>
+
+            <p class="his" id="his">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, aliquid sapiente repudiandae ipsa
+                architecto totam! Qui, fugiat est atque nihil eos deserunt sapiente dolor nam laudantium! Doloremque
+                amet ab repudiandae!
+            </p>
+
+
+            <p class="vis" id="vis">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ex.
+            </p>
+
+
+            <p class="z" id="z">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum aut ad fuga beatae asperiores veritatis
+                quas voluptatum. Similique, aut! Aliquam, vero officiis. Nemo, rem architecto voluptas cum accusantium
+                temporibus commodi ab qui ipsam perferendis laborum in at corrupti est officiis adipisci animi quo
+                placeat recusandae nulla incidunt quam ratione beatae. Illo tempore libero numquam, iste, mollitia
+                minima quibusdam, blanditiis fuga necessitatibus expedita voluptates a totam est ea. Ad eius deserunt
+                maxime aperiam porro est id qui, pariatur dicta perspiciatis deleniti non at eveniet, nihil soluta.
+                Nihil nesciunt delectus nemo odit aperiam doloremque, quasi alias voluptatibus ducimus blanditiis
+                voluptate, incidunt necessitatibus id libero magni vel, accusantium voluptates quisquam nobis dolores
+                eaque. Maxime ipsa quaerat corrupti delectus. Recusandae itaque ratione voluptatibus nisi reprehenderit
+                animi iure.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+        let his_el = document.getElementById("his")
+        let vis_el = document.getElementById("vis")
+        let z_el = document.getElementById("z")
+        let btn1_el = document.getElementById("btn1")
+        let btn2_el = document.getElementById("btn2")
+        let btn3_el = document.getElementById("btn3")
+
+
+
+
+        btn1_el.addEventListener("click", fnc1)
+
+
+        function fnc1() {
+            his_el.style.display = "block";
+            vis_el.style.display = "none";
+            z_el.style.display = "none";
+        }
+
+
+
+
+        btn2_el.addEventListener("click", fnc2)
+
+
+        function fnc2() {
+            vis_el.style.display = "block";
+            his_el.style.display = "none";
+            z_el.style.display = "none";
+        }
+
+
+
+
+        btn3_el.addEventListener("click", fnc3)
+
+
+        function fnc3() {
+            vis_el.style.display = "none";
+            his_el.style.display = "none";
+            z_el.style.display = "block";
+        }
+
+
+
+
+
+    </script>
+</body>
+
+
+
+</html>

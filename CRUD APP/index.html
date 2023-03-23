@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>CRUD APP</title>
+
+</head>
+
+<body>
+
+
+    <!-- <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+
+    <main>
+        <div class="container mt-5 col-6">
+
+
+            <!-- add wala tab -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Chapter Name" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline-success" id="btn" type="button">Add</button>
+            </div>
+            <!-- add wala tab -->
+
+
+
+
+
+
+
+            <!-- list items ko ad karna -->
+            <ul id="ul" class="list-group">
+                <li class="list-group-item d-flex">
+                    <h3 class="flex-grow-1">Chapter 1</h3>
+                    <button class="btn btn-warning mx-3" onclick="editchapter(this)">Edit</button>
+                    <button class="btn btn-danger" onclick="removechapter(this)">Remove</button>
+                </li>
+            </ul>
+
+        </div>
+        <!-- list items ko ad karna -->
+
+
+    </main>
+
+
+    <script>
+        let ul_el = document.getElementById("ul")
+        let btn_el = document.getElementById("btn")
+
+        //CODE TO MAKE (ADD) BUTTON WORK
+        btn_el.addEventListener('click', addchapter)
+        //CODE TO MAKE (ADD) BUTTON WORK
+
+
+
+
+        function addchapter(e) {
+
+            //TO TAKE INPUT VALUE OF ADD SIBLING TEXT
+            if (ul_el.children[0].className == "newemptymsg") {
+                ul_el.children[0].remove();
+            }
+            let currentbtn = e.currentTarget;
+            let currentinput = currentbtn.previousElementSibling
+            let currentchaptername = currentinput.value;
+            console.log(currentinput.value)
+            //TO TAKE INPUT VALUE OF ADD SIBLING TEXT
+
+            //TO ADD NEW LI ON ADD BUTTON CLICK
+
+            let newli = document.createElement("li")
+            newli.className = `list-group-item d-flex`
+
+            newli.innerHTML = `<h3 class="flex-grow-1">${currentchaptername}</h3>
+    <button class="btn btn-warning mx-3" onclick="editchapter(this)">Edit</button>
+    <button class="btn btn-danger" onclick="removechapter(this)">Remove</button>`
+
+            ul_el.appendChild(newli)
+
+            //TO ADD NEW LI ON ADD BUTTON CLICK
+        }
+
+
+
+
+
+        // FUNCTION THAT WORK WHEN REMOVE BUTTON IS CLICKED
+        function removechapter(currentelement) {
+
+            currentelement.parentElement.remove();
+
+
+            // if thereis nothingh than give an message to add items
+            if (ul_el.children.length <= 0) {
+                let newemptymsg = document.createElement("h3")
+                newemptymsg.textContent = "Nothing there please add Chapter"
+                newemptymsg.classList.add("newemptymsg")
+                ul_el.appendChild(newemptymsg)
+            }
+
+        }
+        // FUNCTION THAT WORK WHEN REMOVE BUTTON IS CLICKED
+
+
+
+        // FUNCTION THAT WORKS WHEN EDIT BUTTON IS CLICKED
+        function editchapter(currentelement) {
+
+            if (currentelement.textContent == "Done") {
+                currentelement.textContent = "Edit"
+                let currentchaptername = currentelement.previousElementSibling.value;
+                let currentheading = document.createElement("h3")
+                currentheading.className = "flex-grow-1"
+                currentheading.textContent = currentchaptername
+                currentelement.parentElement.replaceChild(currentheading, currentelement.previousElementSibling)
+
+
+
+
+
+            }
+            else {
+
+                currentelement.textContent = "Done"
+                let currentchaptername = currentelement.previousElementSibling.textContent;
+                let currentinput = document.createElement("input")
+                currentinput.type = "text"
+                currentinput.placeholder = "chapter name"
+                currentinput.className = "form-control"
+                currentinput.value = currentchaptername
+                currentelement.parentElement.replaceChild(currentinput, currentelement.previousElementSibling)
+            }
+
+
+
+        }
+// FUNCTION THAT WORKS WHEN EDIT BUTTON IS CLICKED
+
+    </script>
+    <!-- <script src="index.js"></script> -->
+
+</body>
+
+</html>

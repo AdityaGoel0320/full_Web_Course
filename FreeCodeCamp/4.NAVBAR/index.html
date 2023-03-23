@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+
+            display: none;
+        }
+
+        ul {
+            background-color: aqua;
+            margin: 0px;
+
+            display: flex;
+            padding: 10px;
+            list-style: none;
+
+        }
+
+        li {
+            margin: 3px;
+            font-size: 20px;
+        }
+
+
+
+
+
+
+
+
+        @media (max-width : 700px) {
+            ul {
+
+                display: none;
+            }
+
+
+            div {
+                display: block;
+            }
+
+            
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="icon">
+        &#9776
+    </div>
+    <ul id="ul">
+        <li>fhediuf</li>
+        <li>ikvi</li>
+        <li>ivwih</li>
+
+    </ul>
+
+
+
+    <script>
+        let icon_el = document.getElementById("icon");
+        let nav_el = document.getElementById("nav");
+        let ul_el = document.getElementById("ul");
+
+
+        icon_el.addEventListener("click" , fnc) ;
+
+
+        function fnc(){
+
+            if (ul_el.style.display == "block") {
+
+                ul_el.style.display = "none";
+
+            }
+            else {
+
+                ul_el.style.display  = "block";
+
+            }
+
+
+            
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

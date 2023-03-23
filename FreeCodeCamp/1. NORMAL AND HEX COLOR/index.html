@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <h1 id="h1">hi my color is <span id="value">0</span></h1>
+    <button id="btn1">Click me for normal color</button>
+    <button id="btn2">Click me for hex color</button>
+
+
+
+    <script>
+        let value_el = document.getElementById("value")
+        let btn1_el = document.getElementById("btn1")
+        let btn2_el = document.getElementById("btn2")
+
+        let body_el = document.getElementById("body")
+
+
+
+        // ==============================
+        // for normal color use this code
+        // ==============================
+
+
+        let arr1 = ["red" , "blue" , "aqua"];
+
+        btn1_el.addEventListener("click", fnc1)
+        
+        function fnc1(){
+            let ran = Math.floor(Math.random() * arr1.length)
+            value_el.innerText =arr1[ran];
+            body.style.backgroundColor =arr1[ran];
+
+        }
+
+
+        // ==============================
+        // for normal color use this code
+        // ==============================
+
+
+
+        // ==============================
+        // for hex color use this code
+        // ==============================
+
+
+
+
+        let arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 9, "A", "B", "C", "D", "E", "F"]
+
+        btn2_el.addEventListener("click", fnc2)
+
+        function fnc2() {
+            let color = '#';
+            
+            for (let i = 0; i <= 5; i++) {
+                let ran = Math.floor(Math.random() * arr2.length)
+                color = color + arr2[ran];
+            }
+            
+            value_el.innerText = color;
+            body.style.backgroundColor = color;
+
+        }
+
+
+
+        
+        // ==============================
+        // for hex color use this code
+        // ==============================
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
